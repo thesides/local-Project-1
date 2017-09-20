@@ -116,8 +116,10 @@
 			console.log(response);
 
 			startLat = response.results.0.geometry.location.lat
+			console.log(startLat);
 
 			startLong = response.results.0.geometry.location.lon 
+			console.log(startLong);
 		});
 		
 		//This is the API call for the destination
@@ -129,8 +131,11 @@
 			console.log(response);
 
 			endLat = response.result.0.geometry.location.lat
+			console.log(endLat);
+			
 
 			endLong = response.results.0.geometry.location.lon 
+			console.log(endLong);
 		});
 
 		//This is the API call to Uber
