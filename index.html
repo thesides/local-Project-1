@@ -112,6 +112,8 @@
 	    <script>
     	
     	$("#submit").on("click", function(){
+		
+		event.preventDefault();
 
     		var startPoint = $("#icon_start").val().trim();
     		console.log(startPoint);
