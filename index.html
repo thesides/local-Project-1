@@ -121,8 +121,7 @@
 
     		$.when(
     			$.ajax({
-    				url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + startPoint + "&key=AIzaSyCVUpJOQ43zmN_hdo0fHcY8aGZ7WacfBzg"
-    				,
+    				url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + startPoint + "&key=AIzaSyCVUpJOQ43zmN_hdo0fHcY8aGZ7WacfBzg",
     				method: 'GET'
     			}).done(function(response){
     				console.log(response);
@@ -134,8 +133,7 @@
 
 		//This is the API call for the destination
 		$.ajax({
-			url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + endPoint + "&key=AIzaSyCVUpJOQ43zmN_hdo0fHcY8aGZ7WacfBzg"
-			,
+			url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + endPoint + "&key=AIzaSyCVUpJOQ43zmN_hdo0fHcY8aGZ7WacfBzg",
 			method: 'GET'
 		}).done(function(response){
 			console.log(response);
