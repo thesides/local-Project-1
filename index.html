@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>RideFare</title>
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- google icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- link to style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo center"><i class="material-icons">directions_car</i>RideFare</a>
+		</div>
+	</nav>
+
+	<div class="parallax-container valign-wrapper">
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">edit_location</i>
+						<input id="icon_start" type="text" class="validate" placeholder="Start location">
+						<label for="icon_start"></label>
+					</div>
+				</div>
+			</form>	
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">edit_location</i>
+						<input id="icon_end" type="text" class="validate" placeholder="End location">
+						<label for="icon_end"></label>
+					</div>
+				</div>
+				<div class="center-align">
+				<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+					<i class="material-icons right">send</i>
+				</button>
+				</div>
+			</form>
+		</div>
+		<div class="parallax"><img src="assets/images/austin.jpg"></div>
+	</div>
+
+	<div class="section white">
+		<div class="row container center-align col s12">
+			<h2 class="header">Google Maps</h2>
+			<p class="grey-text text-darken-3 lighten-3">Drop a pin on the map to find a location.</p>
+			<div class="map">
+				<img id="map" src="assets/images/map.jpg" alt="map">
+			</div>
+		</div>
+	</div>
+
+	<div class="parallax-container valign-wrapper">
+		<div class="row" style="color: white;">
+			<div class="col s12 m4 l8">
+				<img id="uber" src="assets/images/uber.jpg" alt="uber">
+			</div>
+		</div>
+		<div class="row" style="color: white;">
+			<div class="col s12 m4 l8">
+				<img id="lyft" src="assets/images/lyft.jpg" alt="lyft">
+			</div>
+		</div>
+		<div class="parallax"><img src="assets/images/austin.jpg"></div>
+	</div>
+
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Enjoy your Ride!</h5>
+					<p class="grey-text text-lighten-4">Helping you save some money $$$</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Group Members</h5>
+					<ul>
+						<li>Aaron Mendonsa</li>
+						<li>Reed Norton</li>
+						<li>Setu Biswas</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2014 Copyright Text
+				<a class="grey-text text-lighten-4 right" href="#!">UT Coding Bootcamp</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<!-- Link to JS file -->
+    <script type="text/javascript" src="assets/javascript/api.js" async></script>
+</body>
+</html>
