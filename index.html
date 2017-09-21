@@ -159,7 +159,9 @@
 			});
 		}
 
-		getUberPriceEstimate();
+		//$.when($.ajax () ).then(getUberPriceEstimate());
+	    
+	    	$(document).ajaxComplete(getUberPriceEstimate());
 
     	});
 
