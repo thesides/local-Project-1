@@ -27,6 +27,9 @@
     margin-top: 40px;
 }
 
+
+
 #map {
-    height: 300px;
-}
+        height: 400px;
+        width: 100%;
+       }
