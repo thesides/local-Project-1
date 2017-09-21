@@ -125,15 +125,16 @@
           map: map,
           title: 'Hello World!'
         });
-	      google.maps.event.addListener(map, 'click', function(event) {
-   placeMarker(event.latLng);
+	map.addListener('click', function(e) {
+    placeMarker(e.latLng, map);
 });
 
-function placeMarker(location) {
+function placeMarker(position, map) {
     var marker = new google.maps.Marker({
-        position: location, 
+        position: position,
         map: map
     });
+    map.panTo(position);
 }
       }
     </script>
