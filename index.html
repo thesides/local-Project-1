@@ -121,7 +121,7 @@
 
 			startLong = response.results[0].geometry.location.lng 
 			console.log(startLong);
-		});
+		}),
 		
 		//This is the API call for the destination
 		$.ajax({
@@ -137,7 +137,7 @@
 
 			endLong = response.results[0].geometry.location.lng 
 			console.log(endLong);
-		});
+		})
 		).then(getUberPriceEstimate());
 		//This is the API call to Uber
 
