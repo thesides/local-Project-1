@@ -108,18 +108,18 @@
 
     	var endLat;
 	    
-	    function getUberPriceEstimate() {
-			$.ajax({
-				url: "https://api.uber.com/v1.2/estimates/price?start_latitude=" + startLat + "&start_longitude=" + startLong + "&end_latitude=" + endLat + "&end_longitude=" + endLong,
-				headers: {
-					Authorization: "Token " + "i_HMTeuGY4Uob6vuVe6vW17G45oWnlIqugMwi6UA" 
-				},
+// 	    function getUberPriceEstimate() {
+// 			$.ajax({
+// 				url: "https://api.uber.com/v1.2/estimates/price?start_latitude=" + startLat + "&start_longitude=" + startLong + "&end_latitude=" + endLat + "&end_longitude=" + endLong,
+// 				headers: {
+// 					Authorization: "Token " + "i_HMTeuGY4Uob6vuVe6vW17G45oWnlIqugMwi6UA" 
+// 				},
 				
-				success: function(result) {
-					console.log(result);
-				}
-			});
-		}
+// 				success: function(result) {
+// 					console.log(result);
+// 				}
+// 			});
+// 		}
 	
 	$.when(
 		$.ajax({
@@ -151,7 +151,22 @@
 			endLong = response.results[0].geometry.location.lng 
 			console.log(endLong);
 		})
-		).then(getUberPriceEstimate());
+		).then(function (){
+	
+	$.ajax({
+				url: "https://api.uber.com/v1.2/estimates/price?start_latitude=" + startLat + "&start_longitude=" + startLong + "&end_latitude=" + endLat + "&end_longitude=" + endLong,
+				headers: {
+					Authorization: "Token " + "i_HMTeuGY4Uob6vuVe6vW17G45oWnlIqugMwi6UA" 
+				},
+				
+				success: function(result) {
+					console.log(result);
+				}
+			});
+	
+	
+	
+	});
 		//This is the API call to Uber
 
 		//prices.Array[8].estimate will give us the estimate range as a string i.e. "$16-21"
