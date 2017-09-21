@@ -125,6 +125,16 @@
           map: map,
           title: 'Hello World!'
         });
+	      google.maps.event.addListener(map, 'click', function(event) {
+   placeMarker(event.latLng);
+});
+
+function placeMarker(location) {
+    var marker = new google.maps.Marker({
+        position: location, 
+        map: map
+    });
+}
       }
     </script>
     <script async defer
