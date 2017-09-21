@@ -110,10 +110,10 @@
     <script type="text/javascript" src="assets/javascript/api.js" async></script>
 	
 	<script>
-       function initMap() {
-        var myLatLng = marker.position;
-	       console.log(myLatLng);
-	
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+	      
+	      console.log(myLatLng);
 
         var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 4,
@@ -121,12 +121,11 @@
         });
 
         var marker = new google.maps.Marker({
-          position: {lat: -25.363, lng: 131.044};
-	
+          position: myLatLng,
           map: map,
           title: 'Hello World!'
         });
-       }
+      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVUpJOQ43zmN_hdo0fHcY8aGZ7WacfBzg&callback=initMap">
