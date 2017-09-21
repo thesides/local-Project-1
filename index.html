@@ -107,6 +107,19 @@
     	var endLong;
 
     	var endLat;
+	    
+	    function getUberPriceEstimate() {
+			$.ajax({
+				url: "https://api.uber.com/v1.2/estimates/price?start_latitude=" + startLat + "&start_longitude=" + startLong + "&end_latitude=" + endLat + "&end_longitude=" + endLong,
+				headers: {
+					Authorization: "Token " + "i_HMTeuGY4Uob6vuVe6vW17G45oWnlIqugMwi6UA" 
+				},
+				
+				success: function(result) {
+					console.log(result);
+				}
+			});
+		}
 	
 	$.when(
 		$.ajax({
@@ -147,18 +160,7 @@
 
 		//startLat = response.results.Array[0].geometry.location.lat 
 
-		function getUberPriceEstimate() {
-			$.ajax({
-				url: "https://api.uber.com/v1.2/estimates/price?start_latitude=" + startLat + "&start_longitude=" + startLong + "&end_latitude=" + endLat + "&end_longitude=" + endLong,
-				headers: {
-					Authorization: "Token " + "i_HMTeuGY4Uob6vuVe6vW17G45oWnlIqugMwi6UA" 
-				},
-				
-				success: function(result) {
-					console.log(result);
-				}
-			});
-		}
+		
 
 		//$.when($.ajax () ).then(getUberPriceEstimate());
 	    
